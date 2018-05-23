@@ -4,7 +4,7 @@ using namespace std;
 class Hunter79
 {
 private:
-int n,i,j,ar[1000];
+int n,i,j;double ar[1000];
 public:
 void get()
 {
@@ -18,7 +18,8 @@ void work()
 {
 for(i=n/2;i<n;i++)
 {
-cout<<"\n"<<((ar[i]+ar[n-i-1])/2);
+double d=((ar[i]+ar[n-i-1])/2);
+cout<<"\n"<<d;
 }
 }
 Hunter79()

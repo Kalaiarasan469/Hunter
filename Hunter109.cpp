@@ -1,5 +1,6 @@
 #include <iostream>
 #include<math.h>
+#include <boost/algorithm/string.hpp>  
 using namespace std;
 class Hunter109
 {
@@ -10,34 +11,43 @@ class Hunter109
     void get()
     {
     cin>>n;
-    for(k=0;k<n;k++)
+    for(i=0;i<n;i++)
     {
-    cin>>s[k];
-    for(i=k-1;(i<c)&&(k!=0);i++)
+    cin>>s[i];
+  boost::algorithm::to_lower(s[i]);
+    }
+    }
+    void sort()
     {
-    int l1=s[i].length();
-    int l2=s[i+1].length();
-    if(l1>l2)
+    for(i=0;i<n;i++)
+    {
+    for(j=0;j<n;j++)
+    {
+    if(i!=j)
+    {
+    if(s[i].length()<s[j].length())
     {
     string temp=s[i];
-    s[i]=s[i+1];
-    s[i+1]=temp;
-    break;
+    s[i]=s[j];
+    s[j]=temp;
     }
-    if(l1==l2)
+    }
+    }
+    }
+    for(i=1;i<n;i++)
     {
-    for(j=0;j<l1;j++)
+    if(s[i].length()==s[i-1].length())
     {
-    if(s[i][j]>s[i+1][j])
+    for(j=0;j<s[i].length();j++)
+    {
+    if(s[i-1][j]>s[i][j])
     {
     string temp=s[i];
-    s[i]=s[i+1];
-    s[i+1]=temp;
+    s[i]=s[i-1];
+    s[i-1]=temp;
     break;
     }
     }
-    }
-    c++;
     }
     }
     }
@@ -49,6 +59,7 @@ class Hunter109
     Hunter109()
     {
     get();
+    sort();
     show();
     }
 };

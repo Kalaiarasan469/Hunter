@@ -4,8 +4,8 @@ using namespace std;
 class Hunter83
 {
 private:
-int i,j,ar[1000],c=0,m;
-long int n;
+int i,j,ar[1000],c=0;
+long int n,m;
 public:
 void get()
 {

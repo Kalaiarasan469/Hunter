@@ -21,7 +21,7 @@ for(k=j+1;k<n;k++)
 {
 if(ar[i]+ar[j]==ar[k])
 {
-cout<<"\n"<<ar[i]<<" "<<ar[j]<<" "<<ar[k];
+cout<<ar[i]<<" "<<ar[j]<<" "<<ar[k]<<"\n";
 }
 }
 }

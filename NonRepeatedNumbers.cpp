@@ -8,7 +8,6 @@ class NonRepeatedNumbers
     public:
     void get()
     {
-        cout<<"INPUT"<<endl;
         cin>>n;
         for(i=0;i<n;i++)
         {
@@ -33,7 +32,7 @@ class NonRepeatedNumbers
                 }
             }
                        void disp()
-{                            cout<<"OUTPUT"<<endl;
+{                         
 for(i=0;i<n;i++)
                 {int t=0;
                     for(j=0;j<c;j++)

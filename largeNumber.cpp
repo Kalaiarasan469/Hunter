@@ -4,7 +4,7 @@
 using namespace std;
 class largeNumber
 {
-    int n,i,j,ar[1000],s,d=0;
+    int n,i,j,*ar,s,d=0;
     public:
     largeNumber()
     {
@@ -14,8 +14,8 @@ class largeNumber
     }
     void get()
     {
-    cout<<"INPUT"<<endl;
     cin>>n;
+    ar=new int[n];
     for(i=0;i<n;i++)
     {
     cin>>ar[i];
@@ -44,9 +44,7 @@ class largeNumber
     }
     void display()
     {
-    cout<<"OUTPUT"<<endl;
-    cout<<endl;
-    cout<<d<<endl;
+    cout<<d;
     }
 };
 int main()
